@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Деталі автомобіля</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="car-details-container">
+        <div id="car-details"></div>
+    </div>
+
+    <script>
+        // Масив з автомобілями
+        const cars = [
+            {
+                id: 1,
+                brand: 'BMW',
+                model: 'X5',
+                year: 2023,
+                price: 65000,
+                image: 'https://aktivist.in.ua/wp-content/uploads/2022/08/obnovljonnyj-bmw-x5-m-2023-avto-novosti-7ea7d97.jpg',
+                description: 'Розкішний позашляховик з повним приводом, шкіряний салон, панорамний дах',
+                specifications: {
+                    engine: {
+                        type: 'Бензиновий з турбонаддувом',
+                        volume: '3.0 л',
+                        power: '340 к.с.',
+                        torque: '450 Нм',
+                        acceleration: '5.5 сек до 100 км/год',
+                        fuelConsumption: '8.5 л/100 км'
+                    },
+                    transmission: {
+                        type: '8-ступінчата автоматична',
+                        driveType: 'Повний привід xDrive'
+                    },
+                    dimensions: {
+                        length: '4922 мм',
+                        width: '2004 мм',
+                        height: '1745 мм',
+                        wheelbase: '2975 мм',
+                        weight: '2135 кг'
+                    },
+                    interior: {
+                        seats: '5 місць',
+                        trunk: '650 л',
+                        upholstery: 'Шкіра Vernasca',
+                        multimedia: 'BMW Live Cockpit Professional з 12.3" дисплеєм'
+                    },
+                    features: [
+                        'Адаптивна M-підвіска',
+                        'Панорамний дах Sky Lounge',
+                        'Система кругового огляду',
+                        'Асистент паркування Plus',
+                        'Лазерні фари BMW Laserlight',
+                        'Система навігації Professional',
+                        '4-зонний клімат-контроль',
+                        'Вентиляція та підігрів сидінь',
+                        'Преміум аудіосистема Harman/Kardon',
+                        'Система безключового доступу'
+                    ],
+                    safety: [
+                        'Система попередження про зіткнення',
+                        'Активний круїз-контроль',
+                        'Асистент утримання смуги руху',
+                        'Система моніторингу сліпих зон',
+                        'Система нічного бачення',
+                        'Система автоматичного гальмування'
+                    ],
+                    colors: {
+                        exterior: ['Alpine White', 'Carbon Black', 'Mineral White', 'Phytonic Blue'],
+                        interior: ['Black', 'Coffee', 'Cognac']
+                    },
+                    warranty: '3 роки або 100,000 км пробігу'
+                },
+                detailedDescription: `
+                    BMW X5 2023 року - це втілення розкоші, потужності та інновацій. Цей SUV преміум-класу пропонує ідеальний баланс між комфортом та динамікою водіння.
+
+                    Екстер'єр автомобіля вражає своєю харизматичною присутністю на дорозі. Фірмова решітка радіатора BMW, елегантні лазерні фари та атлетичні пропорції створюють неповторний образ.
+
+                    Інтер'єр відрізняється винятковою якістю матеріалів та збірки. Шкіряна оббивка Vernasca, панорамний дах та преміальна аудіосистема Harman/Kardon створюють атмосферу розкоші та комфорту.
+
+                    Технологічне оснащення включає найсучасніші системи допомоги водію та розваг. BMW Live Cockpit Professional з двома 12.3-дюймовими дисплеями забезпечує інтуїтивне керування всіма функціями автомобіля.
+
+                    Потужний 3.0-літровий двигун з турбонаддувом забезпечує вражаючу динаміку, while система повного приводу xDrive гарантує відмінну керованість у будь-яких умовах.
+                `
+            },
+            {
+                id: 2,
+                brand: 'Audi',
+                model: 'Q7',
+                year: 2023,
+                price: 70000,
+                image: '//www.topgear.com/sites/default/files/2024/09/35964-AUDIQ72024DEANSMITH10.jpg',
+                description: 'Розкішний позашляховик з повним приводом, шкіряний салон, панорамний дах',
+                specifications: {
+                    engine: {
+                        type: 'Бензиновий з турбонаддувом',
+                        volume: '3.0 TDI QUATRO',
+                        power: '233 к.с.',
+                        torque: '500 Нм',
+                        acceleration: '9.1 сек до 100 км/год',
+                        fuelConsumption: '16 л/100 км'
+                    },
+                    transmission: {
+                        type: '8-ступінчата автоматична',
+                        driveType: 'Повний привід'
+                    },
+                    dimensions: {
+                        length: '4922 мм',
+                        width: '2004 мм',
+                        height: '1745 мм',
+                        wheelbase: '2975 мм',
+                        weight: '2135 кг'
+                    },
+                    interior: {
+                        seats: '5 місць',
+                        trunk: '650 л',
+                        upholstery: 'Шкіра Vernasca',
+                        multimedia: 'BMW Live Cockpit Professional з 12.3" дисплеєм'
+                    },
+                    features: [
+                        'Адаптивна M-підвіска',
+                        'Панорамний дах Sky Lounge',
+                        'Система кругового огляду',
+                        'Асистент паркування Plus',
+                        'Лазерні фари BMW Laserlight',
+                        'Система навігації Professional',
+                        '4-зонний клімат-контроль',
+                        'Вентиляція та підігрів сидінь',
+                        'Преміум аудіосистема Harman/Kardon',
+                        'Система безключового доступу'
+                    ],
+                    safety: [
+                        'Система попередження про зіткнення',
+                        'Активний круїз-контроль',
+                        'Асистент утримання смуги руху',
+                        'Система моніторингу сліпих зон',
+                        'Система нічного бачення',
+                        'Система автоматичного гальмування'
+                    ],
+                    colors: {
+                        exterior: ['Alpine White', 'Carbon Black', 'Mineral White', 'Phytonic Blue'],
+                        interior: ['Black', 'Coffee', 'Cognac']
+                    },
+                    warranty: '3 роки або 100,000 км пробігу'
+                },
+                detailedDescription: `
+                    BMW X5 2023 року - це втілення розкоші, потужності та інновацій. Цей SUV преміум-класу пропонує ідеальний баланс між комфортом та динамікою водіння.
+
+                    Екстер'єр автомобіля вражає своєю харизматичною присутністю на дорозі. Фірмова решітка радіатора BMW, елегантні лазерні фари та атлетичні пропорції створюють неповторний образ.
+
+                    Інтер'єр відрізняється винятковою якістю матеріалів та збірки. Шкіряна оббивка Vernasca, панорамний дах та преміальна аудіосистема Harman/Kardon створюють атмосферу розкоші та комфорту.
+
+                    Технологічне оснащення включає найсучасніші системи допомоги водію та розваг. BMW Live Cockpit Professional з двома 12.3-дюймовими дисплеями забезпечує інтуїтивне керування всіма функціями автомобіля.
+
+                    Потужний 3.0-літровий двигун з турбонаддувом забезпечує вражаючу динаміку, while система повного приводу xDrive гарантує відмінну керованість у будь-яких умовах.
+                `
+            },
+            // Додайте інші автомобілі тут
+        ];
+
+        // Отримання ID автомобіля з URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const carId = parseInt(urlParams.get('id'));
+
+        // Пошук автомобіля за ID
+        const car = cars.find(c => c.id === carId);
+
+        if (car) {
+            const carDetails = document.getElementById('car-details');
+            carDetails.innerHTML = `
+                <div class="car-details-header">
+                    <h1>${car.brand} ${car.model} ${car.year}</h1>
+                    <div class="car-price">$${car.price.toLocaleString()}</div>
+                </div>
+
+                <div class="car-details-gallery">
+                    <div class="main-image-container">
+                        <img src="${car.image}" 
+                             alt="${car.brand} ${car.model}" 
+                             class="car-details-main-image"
+                             onerror="this.src='https://via.placeholder.com/800x500?text=Фото відсутнє'">
+                    </div>
+                </div>
+
+                <div class="car-details-info">
+                    <div class="car-description">
+                        <h2>Опис</h2>
+                        <p>${car.detailedDescription}</p>
+                    </div>
+
+                    <div class="car-specs">
+                        <h2>Характеристики</h2>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <h3>Двигун</h3>
+                                <ul>
+                                    <li>Тип: ${car.specifications.engine.type}</li>
+                                    <li>Об'єм: ${car.specifications.engine.volume}</li>
+                                    <li>Потужність: ${car.specifications.engine.power}</li>
+                                    <li>Крутний момент: ${car.specifications.engine.torque}</li>
+                                </ul>
+                            </div>
+
+                            <div class="spec-item">
+                                <h3>Трансмісія</h3>
+                                <ul>
+                                    <li>Тип: ${car.specifications.transmission.type}</li>
+                                    <li>Привід: ${car.specifications.transmission.driveType}</li>
+                                </ul>
+                            </div>
+
+                            <div class="spec-item">
+                                <h3>Розміри</h3>
+                                <ul>
+                                    <li>Довжина: ${car.specifications.dimensions.length}</li>
+                                    <li>Ширина: ${car.specifications.dimensions.width}</li>
+                                    <li>Висота: ${car.specifications.dimensions.height}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-contact">
+                    <button class="contact-btn" onclick="alert('Зв\'яжіться з нами: +380 XX XXX XX XX')">
+                        Зв'язатися з менеджером
+                    </button>
+                </div>
+            `;
+        } else {
+            document.getElementById('car-details').innerHTML = `
+                <div class="error-message">
+                    <h2>Автомобіль не знайдено</h2>
+                    <a href="index.html" class="back-btn">Повернутися на головну</a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html> 
