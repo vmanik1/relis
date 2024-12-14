@@ -78,7 +78,7 @@ const cars = [
         model: 'Q7',
         year: 2023,
         price: 70000,
-        image: 'https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg',
+        image: 'https://www.topgear.com/sites/default/files/2024/09/35964-AUDIQ72024DEANSMITH10.jpg',
         description: 'Преміум SUV, 7 місць, матричні фари, адаптивна підвіска'
     },
     {
@@ -87,7 +87,7 @@ const cars = [
         model: 'E-Class',
         year: 2022,
         price: 55000,
-        image: 'https://images.pexels.com/photos/193999/pexels-photo-193999.jpeg',
+        image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmercedes-benz-kiev.com%2Fobzor-avtomobilya-e-class-limousine&psig=AOvVaw1We44qYEinI5tbw-On1s7A&ust=1734257428103000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODFxcSCp4oDFQAAAAAdAAAAABAE',
         description: 'Бізнес седан, максимальна комплектація, автопілот'
     },
     {
