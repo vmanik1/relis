@@ -87,7 +87,7 @@ const cars = [
         model: 'E-Class',
         year: 2022,
         price: 55000,
-        image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmercedes-benz-kiev.com%2Fobzor-avtomobilya-e-class-limousine&psig=AOvVaw1We44qYEinI5tbw-On1s7A&ust=1734257428103000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODFxcSCp4oDFQAAAAAdAAAAABAE',
+        image: 'https://img.mercedes-benz-kiev.com/data/lineup/e-class-limousine/mercedes-benz-e-class-limousine-12.jpeg',
         description: 'Бізнес седан, максимальна комплектація, автопілот'
     },
     {
@@ -96,7 +96,7 @@ const cars = [
         model: 'Camry',
         year: 2023,
         price: 35000,
-        image: 'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEdh1A-taOET7ThU3twM0rxNx0EVIVCAEG8g&s',
         description: 'Надійний седан, гібридна установка, клімат-контроль'
     },
     {
@@ -104,8 +104,8 @@ const cars = [
         brand: 'Volkswagen',
         model: 'Golf',
         year: 2022,
-        price: 28000,
-        image: 'https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg',
+        price: 18000,
+        image: 'https://upload.wikimedia.org/wikipedia/commons/8/86/Volkswagen_Golf_VI_%28front_quarter%29.JPG',
         description: 'Компактний хетчбек, економічний двигун, відмінна керованість'
     },
     {
